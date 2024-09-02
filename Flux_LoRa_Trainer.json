@@ -1,0 +1,3536 @@
+{
+  "last_node_id": 144,
+  "last_link_id": 236,
+  "nodes": [
+    {
+      "id": 95,
+      "type": "OptimizerConfig",
+      "pos": [
+        693.2981086515633,
+        298.39498744869366
+      ],
+      "size": {
+        "0": 352.9029235839844,
+        "1": 244
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "optimizer_settings",
+          "type": "ARGS",
+          "links": [
+            180
+          ],
+          "shape": 3,
+          "label": "optimizer_settings"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OptimizerConfig"
+      },
+      "widgets_values": [
+        "adamw8bit",
+        1,
+        "constant",
+        0,
+        1,
+        1,
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 14,
+      "type": "FluxTrainSave",
+      "pos": [
+        1970.9227178515675,
+        105.7216422143556
+      ],
+      "size": {
+        "0": 314.3637390136719,
+        "1": 122
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 40,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            72
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "lora_path",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "lora_path"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": [
+            110
+          ],
+          "slot_index": 2,
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 45,
+      "type": "FluxTrainValidate",
+      "pos": [
+        2394.1864941406297,
+        233.39764155822743
+      ],
+      "size": {
+        "0": 312.3999938964844,
+        "1": 57.170143127441406
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 137,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_settings",
+          "type": "VALSETTINGS",
+          "link": 218,
+          "label": "validation_settings"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            71
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            70,
+            119
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "validation_images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainValidate"
+      }
+    },
+    {
+      "id": 60,
+      "type": "FluxTrainValidate",
+      "pos": [
+        3152.63489453125,
+        240.37803855896
+      ],
+      "size": {
+        "0": 312.3999938964844,
+        "1": 56.166229248046875
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 88,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_settings",
+          "type": "VALSETTINGS",
+          "link": 219,
+          "label": "validation_settings"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            91
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            90,
+            122
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "validation_images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainValidate"
+      }
+    },
+    {
+      "id": 62,
+      "type": "FluxTrainSave",
+      "pos": [
+        3492.63489453125,
+        122.37803855895999
+      ],
+      "size": {
+        "0": 327.5599060058594,
+        "1": 122
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 91,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            92
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "lora_path",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "lora_path"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": [
+            120
+          ],
+          "slot_index": 2,
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 82,
+      "type": "SomethingToString",
+      "pos": [
+        3498.63489453125,
+        292.37803855896016
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 45,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "*",
+          "link": 120,
+          "label": "输入"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            121
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SomethingToString"
+      },
+      "widgets_values": [
+        "steps ",
+        ""
+      ]
+    },
+    {
+      "id": 65,
+      "type": "FluxTrainValidate",
+      "pos": [
+        3916.703661129353,
+        242.94776458622965
+      ],
+      "size": {
+        "0": 312.3999938964844,
+        "1": 60.373287200927734
+      },
+      "flags": {},
+      "order": 46,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 93,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_settings",
+          "type": "VALSETTINGS",
+          "link": 220,
+          "label": "validation_settings"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            96
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            95,
+            126
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "validation_images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainValidate"
+      }
+    },
+    {
+      "id": 8,
+      "type": "FluxTrainValidate",
+      "pos": [
+        1634,
+        242
+      ],
+      "size": {
+        "0": 312.3999938964844,
+        "1": 46
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 7,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_settings",
+          "type": "VALSETTINGS",
+          "link": 217,
+          "label": "validation_settings"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            40
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            8,
+            112
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "validation_images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainValidate"
+      }
+    },
+    {
+      "id": 78,
+      "type": "AddLabel",
+      "pos": [
+        1636,
+        339
+      ],
+      "size": {
+        "0": 315,
+        "1": 274
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 32,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 112,
+          "label": "图像"
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "caption"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 111,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            227
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AddLabel"
+      },
+      "widgets_values": [
+        10,
+        2,
+        48,
+        32,
+        "white",
+        "black",
+        "FreeMono.ttf",
+        "Text",
+        "up",
+        ""
+      ]
+    },
+    {
+      "id": 97,
+      "type": "VisualizeLoss",
+      "pos": [
+        1976,
+        415
+      ],
+      "size": {
+        "0": 303.6300048828125,
+        "1": 198
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 162,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "plot",
+          "type": "IMAGE",
+          "links": [
+            161
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "plot"
+        },
+        {
+          "name": "loss_list",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3,
+          "label": "loss_list"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VisualizeLoss"
+      },
+      "widgets_values": [
+        "seaborn-v0_8-dark-palette",
+        100,
+        true,
+        512,
+        512,
+        false
+      ]
+    },
+    {
+      "id": 79,
+      "type": "SomethingToString",
+      "pos": [
+        1973,
+        283
+      ],
+      "size": {
+        "0": 313.3637390136719,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 29,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "*",
+          "link": 110,
+          "label": "输入"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            111
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SomethingToString"
+      },
+      "widgets_values": [
+        "steps ",
+        ""
+      ]
+    },
+    {
+      "id": 9,
+      "type": "PreviewImage",
+      "pos": [
+        1645,
+        662
+      ],
+      "size": {
+        "0": 295.151611328125,
+        "1": 308.08447265625
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 98,
+      "type": "SaveImage",
+      "pos": [
+        1971,
+        665
+      ],
+      "size": {
+        "0": 318.151611328125,
+        "1": 305.08447265625
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 161,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "flux_lora_loss_plot"
+      ]
+    },
+    {
+      "id": 80,
+      "type": "AddLabel",
+      "pos": [
+        2401,
+        337
+      ],
+      "size": {
+        "0": 310.0489807128906,
+        "1": 291.4946594238281
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 40,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 119,
+          "label": "图像"
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "caption"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 117,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            226
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AddLabel"
+      },
+      "widgets_values": [
+        10,
+        2,
+        48,
+        32,
+        "white",
+        "black",
+        "FreeMono.ttf",
+        "Text",
+        "up",
+        ""
+      ]
+    },
+    {
+      "id": 99,
+      "type": "VisualizeLoss",
+      "pos": [
+        2748,
+        449
+      ],
+      "size": {
+        "0": 324.29443359375,
+        "1": 198
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 164,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "plot",
+          "type": "IMAGE",
+          "links": [
+            163
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "plot"
+        },
+        {
+          "name": "loss_list",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3,
+          "label": "loss_list"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VisualizeLoss"
+      },
+      "widgets_values": [
+        "seaborn-v0_8-dark-palette",
+        100,
+        true,
+        512,
+        512,
+        false
+      ]
+    },
+    {
+      "id": 81,
+      "type": "SomethingToString",
+      "pos": [
+        2747,
+        311
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 37,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "*",
+          "link": 116,
+          "label": "输入"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            117
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SomethingToString"
+      },
+      "widgets_values": [
+        "steps ",
+        ""
+      ]
+    },
+    {
+      "id": 47,
+      "type": "FluxTrainSave",
+      "pos": [
+        2743,
+        111
+      ],
+      "size": {
+        "0": 323.2839050292969,
+        "1": 137.36793518066406
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 71,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            97
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "lora_path",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "lora_path"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": [
+            116
+          ],
+          "slot_index": 2,
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 100,
+      "type": "SaveImage",
+      "pos": [
+        2737,
+        688
+      ],
+      "size": {
+        "0": 337.35565185546875,
+        "1": 286.03424072265625
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 163,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "flux_lora_loss_plot"
+      ]
+    },
+    {
+      "id": 116,
+      "type": "Note",
+      "pos": [
+        720,
+        770
+      ],
+      "size": {
+        "0": 308.08209228515625,
+        "1": 78.06562805175781
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 2,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Validation sampling settings are set here for all the sampler nodes."
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 83,
+      "type": "AddLabel",
+      "pos": [
+        3153,
+        350
+      ],
+      "size": {
+        "0": 315,
+        "1": 274
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 47,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 122,
+          "label": "图像"
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "caption"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 121,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            225
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AddLabel"
+      },
+      "widgets_values": [
+        10,
+        2,
+        48,
+        32,
+        "white",
+        "black",
+        "FreeMono.ttf",
+        "Text",
+        "up",
+        ""
+      ]
+    },
+    {
+      "id": 61,
+      "type": "PreviewImage",
+      "pos": [
+        3153,
+        687
+      ],
+      "size": {
+        "0": 314.04852294921875,
+        "1": 281.1690368652344
+      },
+      "flags": {},
+      "order": 42,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 90,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 101,
+      "type": "VisualizeLoss",
+      "pos": [
+        3501,
+        425
+      ],
+      "size": {
+        "0": 314.6152038574219,
+        "1": 198
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 166,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "plot",
+          "type": "IMAGE",
+          "links": [
+            165
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "plot"
+        },
+        {
+          "name": "loss_list",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3,
+          "label": "loss_list"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VisualizeLoss"
+      },
+      "widgets_values": [
+        "seaborn-v0_8-dark-palette",
+        100,
+        true,
+        512,
+        512,
+        false
+      ]
+    },
+    {
+      "id": 102,
+      "type": "SaveImage",
+      "pos": [
+        3498,
+        680
+      ],
+      "size": {
+        "0": 331.2515563964844,
+        "1": 285.40374755859375
+      },
+      "flags": {},
+      "order": 43,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 165,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "flux_lora_loss_plot"
+      ]
+    },
+    {
+      "id": 66,
+      "type": "PreviewImage",
+      "pos": [
+        3919,
+        679
+      ],
+      "size": {
+        "0": 308.10308837890625,
+        "1": 285.6033020019531
+      },
+      "flags": {},
+      "order": 49,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 95,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 85,
+      "type": "AddLabel",
+      "pos": [
+        3917,
+        351
+      ],
+      "size": {
+        "0": 315,
+        "1": 274
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 56,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 126,
+          "label": "图像"
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "caption"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 124,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            224
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AddLabel"
+      },
+      "widgets_values": [
+        10,
+        2,
+        48,
+        32,
+        "white",
+        "black",
+        "FreeMono.ttf",
+        "Text",
+        "up",
+        ""
+      ]
+    },
+    {
+      "id": 90,
+      "type": "SaveImage",
+      "pos": [
+        4265,
+        672
+      ],
+      "size": {
+        "0": 319.0852966308594,
+        "1": 287.5650634765625
+      },
+      "flags": {},
+      "order": 55,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 138,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "flux_lora_loss_plot"
+      ]
+    },
+    {
+      "id": 70,
+      "type": "VisualizeLoss",
+      "pos": [
+        4271,
+        414
+      ],
+      "size": {
+        "0": 312.4066467285156,
+        "1": 198
+      },
+      "flags": {},
+      "order": 51,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 99,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "plot",
+          "type": "IMAGE",
+          "links": [
+            138
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "plot"
+        },
+        {
+          "name": "loss_list",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3,
+          "label": "loss_list"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VisualizeLoss"
+      },
+      "widgets_values": [
+        "ggplot",
+        1000,
+        true,
+        512,
+        512,
+        false
+      ]
+    },
+    {
+      "id": 84,
+      "type": "SomethingToString",
+      "pos": [
+        4256.703661129347,
+        279.9477645862299
+      ],
+      "size": {
+        "0": 333.0666198730469,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 52,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "*",
+          "link": 125,
+          "label": "输入"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            124
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SomethingToString"
+      },
+      "widgets_values": [
+        "steps ",
+        ""
+      ]
+    },
+    {
+      "id": 67,
+      "type": "FluxTrainSave",
+      "pos": [
+        4255.703661129347,
+        110.9477645862292
+      ],
+      "size": {
+        "0": 334.0666198730469,
+        "1": 122
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 96,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            98,
+            99
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "lora_path",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "lora_path"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": [
+            125
+          ],
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 119,
+      "type": "ImageBatchMulti",
+      "pos": [
+        4665,
+        115
+      ],
+      "size": {
+        "0": 314.82147216796875,
+        "1": 142
+      },
+      "flags": {},
+      "order": 58,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 227,
+          "label": "图像_1"
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": 226,
+          "label": "图像_2"
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": 225,
+          "label": "图像_3"
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "link": 224,
+          "label": "图像_4"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            195,
+            228
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        4,
+        null
+      ]
+    },
+    {
+      "id": 69,
+      "type": "FluxTrainEnd",
+      "pos": [
+        4670,
+        460
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 98
+      },
+      "flags": {},
+      "order": 50,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 98,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "lora_path",
+          "type": "STRING",
+          "links": [
+            103,
+            135,
+            213
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "lora_path"
+        },
+        {
+          "name": "metadata",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "metadata"
+        },
+        {
+          "name": "lora_path",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainEnd"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 117,
+      "type": "ImageConcatFromBatch",
+      "pos": [
+        4670,
+        310
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 60,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 195,
+          "label": "images"
+        },
+        {
+          "name": "num_columns",
+          "type": "INT",
+          "link": 199,
+          "widget": {
+            "name": "num_columns"
+          },
+          "label": "num_columns"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            210
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageConcatFromBatch"
+      },
+      "widgets_values": [
+        3,
+        false,
+        1024
+      ]
+    },
+    {
+      "id": 120,
+      "type": "GetImageSizeAndCount",
+      "pos": [
+        5010,
+        120
+      ],
+      "size": {
+        "0": 232.7214813232422,
+        "1": 86
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 59,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 228,
+          "label": "图像"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "512 width",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "宽度"
+        },
+        {
+          "name": "560 height",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "高度"
+        },
+        {
+          "name": "4 count",
+          "type": "INT",
+          "links": [
+            199
+          ],
+          "slot_index": 3,
+          "shape": 3,
+          "label": "数量"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageSizeAndCount"
+      }
+    },
+    {
+      "id": 74,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        5020,
+        560
+      ],
+      "size": {
+        "0": 218.05709838867188,
+        "1": 96.77263641357422
+      },
+      "flags": {},
+      "order": 53,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 103,
+          "dir": 3,
+          "label": "输入"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 73,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        5020,
+        680
+      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 57,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 136,
+          "dir": 3,
+          "label": "输入"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 129,
+      "type": "AddLabel",
+      "pos": [
+        5010,
+        270
+      ],
+      "size": {
+        "0": 234.92147827148438,
+        "1": 268.4609375
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 61,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 210,
+          "label": "图像"
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "caption"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 213,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            214
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AddLabel"
+      },
+      "widgets_values": [
+        10,
+        2,
+        48,
+        32,
+        "white",
+        "black",
+        "FreeMono.ttf",
+        "Text",
+        "up",
+        ""
+      ]
+    },
+    {
+      "id": 130,
+      "type": "SaveImage",
+      "pos": [
+        5264,
+        118
+      ],
+      "size": {
+        "0": 515.0036010742188,
+        "1": 642.7297973632812
+      },
+      "flags": {},
+      "order": 62,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 214,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "flux_lora_trainer_sheet"
+      ]
+    },
+    {
+      "id": 105,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        39.72726284373886,
+        642.5450051047587
+      ],
+      "size": {
+        "0": 572.2452392578125,
+        "1": 313.3619384765625
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 183,
+          "dir": 3,
+          "label": "输入"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 137,
+      "type": "LayerUtility: TextJoin",
+      "pos": [
+        806.2053490031252,
+        -800.4364105890628
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_1",
+          "type": "STRING",
+          "link": 232,
+          "widget": {
+            "name": "text_1"
+          },
+          "label": "文本_1"
+        },
+        {
+          "name": "text_2",
+          "type": "STRING",
+          "link": 236,
+          "widget": {
+            "name": "text_2"
+          },
+          "label": "文本_2"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            230
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "文本"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: TextJoin"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 134,
+      "type": "LoadImageListFromDir //Inspire",
+      "pos": [
+        54.30757851171876,
+        -802.8464982437498
+      ],
+      "size": {
+        "0": 315,
+        "1": 170
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "directory",
+          "type": "STRING",
+          "link": 231,
+          "widget": {
+            "name": "directory"
+          },
+          "label": "路径"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            229,
+            235
+          ],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 6,
+          "label": "遮罩"
+        },
+        {
+          "name": "FILE PATH",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageListFromDir //Inspire"
+      },
+      "widgets_values": [
+        "E:\\tmp\\test",
+        100,
+        0,
+        true
+      ]
+    },
+    {
+      "id": 108,
+      "type": "TrainDatasetGeneralConfig",
+      "pos": [
+        52,
+        81
+      ],
+      "size": {
+        "0": 274.2516174316406,
+        "1": 154
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "dataset_general",
+          "type": "JSON",
+          "links": [
+            215
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "dataset_general"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TrainDatasetGeneralConfig"
+      },
+      "widgets_values": [
+        false,
+        false,
+        false,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 37,
+      "type": "FluxTrainValidationSettings",
+      "pos": [
+        699.2981086515633,
+        548.3949874486946
+      ],
+      "size": {
+        "0": 350.1340637207031,
+        "1": 250
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "validation_settings",
+          "type": "VALSETTINGS",
+          "links": [
+            217,
+            218,
+            219,
+            220
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "validation_settings"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainValidationSettings"
+      },
+      "widgets_values": [
+        20,
+        512,
+        512,
+        3.5,
+        42,
+        "fixed",
+        true,
+        0.5,
+        1.15
+      ]
+    },
+    {
+      "id": 46,
+      "type": "PreviewImage",
+      "pos": [
+        2435,
+        691
+      ],
+      "size": {
+        "0": 313.20159912109375,
+        "1": 281.6973876953125
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 70,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 141,
+      "type": "WD14Tagger|pysssss",
+      "pos": [
+        443,
+        -984
+      ],
+      "size": [
+        281.0328863007412,
+        221.65014120084743
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 235
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            236
+          ],
+          "slot_index": 0,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WD14Tagger|pysssss"
+      },
+      "widgets_values": [
+        "wd-v1-4-moat-tagger-v2",
+        0.35,
+        0.9,
+        true,
+        false,
+        ""
+      ]
+    },
+    {
+      "id": 138,
+      "type": "OllamaVision",
+      "pos": [
+        453,
+        -703
+      ],
+      "size": [
+        275.0328863007412,
+        220
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null,
+          "label": "images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "description",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "description"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaVision"
+      },
+      "widgets_values": [
+        "describe the image in 40 words and 2 sentences\n",
+        "enable",
+        "http://127.0.0.1:11434",
+        "",
+        275733383163387,
+        "randomize",
+        "0"
+      ]
+    },
+    {
+      "id": 140,
+      "type": "Note",
+      "pos": [
+        -740,
+        -970
+      ],
+      "size": {
+        "0": 357.1923828125,
+        "1": 202.9678192138672
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "本工作流集合整理自\n葫芦娃（https://github.com/chflame163/ComfyUI_LayerStyle）\n和kijai（https://github.com/kijai/ComfyUI-FluxTrainer/tree/3c3121915fe1e49b86891d25119f13cbd6712189）\n学习交流微信：ZhiWenDesign\n\n可以在Comfy中实现一站式训练集打标和训练Lora,其中1234为训练集反推打标，56789101112为lora训练\n\n使用前步骤：\n1、先关闭下面一排5-12节点，用上方1-4节点进行训练集处理，设置好输入和输出目录，\n2、打标运行完成后，关闭1234节点，开启5-12节点进行lora训练。"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 136,
+      "type": "LayerUtility: String",
+      "pos": [
+        806.2053490031252,
+        -910.4364105890627
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "links": [
+            232
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "string"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: String"
+      },
+      "widgets_values": [
+        "main tag"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "FluxTrainModelSelect",
+      "pos": [
+        690,
+        110
+      ],
+      "size": {
+        "0": 366.65667724609375,
+        "1": 135.1158447265625
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "flux_models",
+          "type": "TRAIN_FLUX_MODELS",
+          "links": [
+            179
+          ],
+          "shape": 3,
+          "label": "flux_models"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainModelSelect"
+      },
+      "widgets_values": [
+        "flux1-dev-fp8.safetensors",
+        "ae.safetensors",
+        "clip_l.safetensors",
+        "t5xxl_fp16.safetensors"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 113,
+      "type": "Note",
+      "pos": [
+        -242,
+        300
+      ],
+      "size": {
+        "0": 252.90550231933594,
+        "1": 264.7868957519531
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "\n对于多分辨率训练，请输入具有不同数据集分辨率的相同源目录。据我所知，Flux喜欢多种分辨率。\n对于单分辨率训练，只需添加单个数据集即可。\n\n地址填写自己的本地训练集地址即可。"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 115,
+      "type": "Note",
+      "pos": [
+        -230,
+        79
+      ],
+      "size": {
+        "0": 247.2526092529297,
+        "1": 118.16704559326172
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "您可以使用与在 Comfy 中进行推理相同的模型。当启用fp8 base 时，模型在初始化时向下转换为 torch.float e4m3fn，这意味着如果您在此处加载 fp8 模型，它也应该具有相同的格式。"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 143,
+      "type": "Note",
+      "pos": [
+        339,
+        88
+      ],
+      "size": [
+        339.1784893633733,
+        186.61696700522077
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 2,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Nuckyduck:\n\nUse the train Dataset to incorporate your images. I haven't tried higher than 512 base with 1024 max upscale. You can try for higher/less depending on your total vram. \n\nUnder flux model I would recommend using flux1-dev-fp8.\n\nI haven't messed around with the optimizer. You can try cosine restart if you're brave. \n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 133,
+      "type": "LayerUtility: ImageTaggerSave",
+      "pos": [
+        1201,
+        -968
+      ],
+      "size": {
+        "0": 352.718505859375,
+        "1": 410
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 229,
+          "label": "image"
+        },
+        {
+          "name": "tag_text",
+          "type": "STRING",
+          "link": 230,
+          "widget": {
+            "name": "tag_text"
+          },
+          "label": "tag_text"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: ImageTaggerSave"
+      },
+      "widgets_values": [
+        "",
+        "C:\\Path\\to\\images",
+        "prefix_name",
+        "None",
+        "png",
+        100,
+        true
+      ]
+    },
+    {
+      "id": 135,
+      "type": "LayerUtility: String",
+      "pos": [
+        58,
+        -931
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "links": [
+            231
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "string"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: String"
+      },
+      "widgets_values": [
+        "C:\\Path\\to\\data"
+      ]
+    },
+    {
+      "id": 112,
+      "type": "TrainDatasetAdd",
+      "pos": [
+        43,
+        264
+      ],
+      "size": {
+        "0": 259.5897521972656,
+        "1": 318
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "dataset_config",
+          "type": "JSON",
+          "link": 215,
+          "label": "dataset_config"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dataset",
+          "type": "JSON",
+          "links": [
+            189
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "dataset"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TrainDatasetAdd"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1,
+        "C:\\Path\\to\\processed images\n",
+        "training tag",
+        true,
+        false,
+        1,
+        512,
+        1024
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 107,
+      "type": "InitFluxLoRATraining",
+      "pos": [
+        1084.2981086515638,
+        115.39498744869381
+      ],
+      "size": {
+        "0": 437.6565246582031,
+        "1": 810
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "flux_models",
+          "type": "TRAIN_FLUX_MODELS",
+          "link": 179,
+          "label": "flux_models"
+        },
+        {
+          "name": "dataset",
+          "type": "JSON",
+          "link": 189,
+          "label": "dataset"
+        },
+        {
+          "name": "optimizer_settings",
+          "type": "ARGS",
+          "link": 180,
+          "label": "optimizer_settings"
+        },
+        {
+          "name": "resume_args",
+          "type": "ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "epochs_count",
+          "type": "INT",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "epochs_count"
+        },
+        {
+          "name": "args",
+          "type": "KOHYA_ARGS",
+          "links": [
+            183
+          ],
+          "shape": 3,
+          "label": "args"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InitFluxLoRATraining"
+      },
+      "widgets_values": [
+        "LoRA_Name",
+        "C:\\path\\to\\lora_output",
+        64,
+        64,
+        0.00005,
+        1500,
+        true,
+        "disk",
+        "disk",
+        true,
+        "logit_normal",
+        0,
+        1,
+        1.29,
+        "sigmoid",
+        1,
+        "raw",
+        1,
+        1,
+        false,
+        true,
+        "bf16",
+        "bf16",
+        "sdpa",
+        "training tag",
+        "num_train_epochs=2",
+        "disabled",
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "type": "FluxTrainLoop",
+      "pos": [
+        1633,
+        113
+      ],
+      "size": {
+        "0": 315.1314392089844,
+        "1": 78
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 181,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            7,
+            162
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        250
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 44,
+      "type": "FluxTrainLoop",
+      "pos": [
+        2390.1864941406297,
+        103.39764155822772
+      ],
+      "size": {
+        "0": 315.3551330566406,
+        "1": 78
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 72,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            137,
+            164
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        250
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 59,
+      "type": "FluxTrainLoop",
+      "pos": [
+        3144.63489453125,
+        112.37803855895999
+      ],
+      "size": {
+        "0": 321.10791015625,
+        "1": 78
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 97,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            88,
+            166
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        250
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 64,
+      "type": "FluxTrainLoop",
+      "pos": [
+        3910.703661129353,
+        102.94776458622917
+      ],
+      "size": {
+        "0": 318.1881408691406,
+        "1": 80.91426086425781
+      },
+      "flags": {},
+      "order": 44,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 92,
+          "label": "network_trainer"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            93
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": null,
+          "shape": 3,
+          "label": "steps"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 144,
+      "type": "Note",
+      "pos": [
+        1103,
+        -205
+      ],
+      "size": [
+        389.44909481791956,
+        276.07194609613
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 2,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "**IMPORTANT** You need to use 'split mode' if you want to train on lower than 24gb vram. Even at 16GB, not using split mode gives terrible and slow results. You can try without it but YMMV.\n\nFor network dim/alpha, were going to use 64. 86 gives good results for more detailed loras but I wouldn't use it if you're just training a face, as 64 seems more than good enough.\n\nFor max train steps, I use 1500 but you might be able to get away with less using better images.\n\nI use bf16 as save type."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 89,
+      "type": "UploadToHuggingFace",
+      "pos": [
+        4667,
+        634
+      ],
+      "size": {
+        "0": 315,
+        "1": 178
+      },
+      "flags": {},
+      "order": 54,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": null,
+          "label": "network_trainer"
+        },
+        {
+          "name": "source_path",
+          "type": "STRING",
+          "link": 135,
+          "widget": {
+            "name": "source_path"
+          },
+          "label": "source_path"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": null,
+          "shape": 3,
+          "label": "network_trainer"
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": [
+            136
+          ],
+          "shape": 3,
+          "label": "status"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UploadToHuggingFace"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 139,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": {
+        "0": -350,
+        "1": -980,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 305.3604431152344,
+        "1": 370
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null,
+          "label": "可选连接"
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      }
+    },
+    {
+      "id": 142,
+      "type": "Note",
+      "pos": [
+        -744,
+        -718
+      ],
+      "size": [
+        372.2566665451924,
+        435.9188218787748
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Nuckyduck:\n\nUse the switches on the right to control what nodes are active.\n\nUse 1-4 to process your data.\n\nLoad your image directory from the string in box one. From there, choose if you want to use a locally hosted LM or WD14 tagger to tag your images. From there, use any forced tag (I used my name) as main tag and it will add to those tags.\n\nUse 'right click' -> Bypass to skip a node, such as the tagger you are not using.\n\nNote: I got the best results just using my name as the tag with nothing else. No 1boy, solo, whatever. \n\n4 Will save your processed images to a folder. I recommend using an output folder to keep your preprocessed and original images separate.\n\nThen turn 1-4 off and turn 5-12 on and continue to train.\n\nThis workflow is adapted from the original one here, mostly with personal changes. All credit goes to https://openart.ai/workflows/kaka/flux-lora-training-in-comfyui/mhY7UndLNPLEGNGiy7kJ"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      7,
+      4,
+      0,
+      8,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      8,
+      8,
+      1,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      8,
+      0,
+      14,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      70,
+      45,
+      1,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      71,
+      45,
+      0,
+      47,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      72,
+      14,
+      0,
+      44,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      88,
+      59,
+      0,
+      60,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      90,
+      60,
+      1,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      91,
+      60,
+      0,
+      62,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      92,
+      62,
+      0,
+      64,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      93,
+      64,
+      0,
+      65,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      95,
+      65,
+      1,
+      66,
+      0,
+      "IMAGE"
+    ],
+    [
+      96,
+      65,
+      0,
+      67,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      97,
+      47,
+      0,
+      59,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      98,
+      67,
+      0,
+      69,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      99,
+      67,
+      0,
+      70,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      103,
+      69,
+      0,
+      74,
+      0,
+      "*"
+    ],
+    [
+      110,
+      14,
+      2,
+      79,
+      0,
+      "*"
+    ],
+    [
+      111,
+      79,
+      0,
+      78,
+      2,
+      "STRING"
+    ],
+    [
+      112,
+      8,
+      1,
+      78,
+      0,
+      "IMAGE"
+    ],
+    [
+      116,
+      47,
+      2,
+      81,
+      0,
+      "*"
+    ],
+    [
+      117,
+      81,
+      0,
+      80,
+      2,
+      "STRING"
+    ],
+    [
+      119,
+      45,
+      1,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      120,
+      62,
+      2,
+      82,
+      0,
+      "*"
+    ],
+    [
+      121,
+      82,
+      0,
+      83,
+      2,
+      "STRING"
+    ],
+    [
+      122,
+      60,
+      1,
+      83,
+      0,
+      "IMAGE"
+    ],
+    [
+      124,
+      84,
+      0,
+      85,
+      2,
+      "STRING"
+    ],
+    [
+      125,
+      67,
+      2,
+      84,
+      0,
+      "*"
+    ],
+    [
+      126,
+      65,
+      1,
+      85,
+      0,
+      "IMAGE"
+    ],
+    [
+      135,
+      69,
+      0,
+      89,
+      1,
+      "STRING"
+    ],
+    [
+      136,
+      89,
+      1,
+      73,
+      0,
+      "*"
+    ],
+    [
+      137,
+      44,
+      0,
+      45,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      138,
+      70,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      161,
+      97,
+      0,
+      98,
+      0,
+      "IMAGE"
+    ],
+    [
+      162,
+      4,
+      0,
+      97,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      163,
+      99,
+      0,
+      100,
+      0,
+      "IMAGE"
+    ],
+    [
+      164,
+      44,
+      0,
+      99,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      165,
+      101,
+      0,
+      102,
+      0,
+      "IMAGE"
+    ],
+    [
+      166,
+      59,
+      0,
+      101,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      179,
+      2,
+      0,
+      107,
+      0,
+      "TRAIN_FLUX_MODELS"
+    ],
+    [
+      180,
+      95,
+      0,
+      107,
+      2,
+      "ARGS"
+    ],
+    [
+      181,
+      107,
+      0,
+      4,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      183,
+      107,
+      2,
+      105,
+      0,
+      "*"
+    ],
+    [
+      189,
+      112,
+      0,
+      107,
+      1,
+      "JSON"
+    ],
+    [
+      195,
+      119,
+      0,
+      117,
+      0,
+      "IMAGE"
+    ],
+    [
+      199,
+      120,
+      3,
+      117,
+      1,
+      "INT"
+    ],
+    [
+      210,
+      117,
+      0,
+      129,
+      0,
+      "IMAGE"
+    ],
+    [
+      213,
+      69,
+      0,
+      129,
+      2,
+      "STRING"
+    ],
+    [
+      214,
+      129,
+      0,
+      130,
+      0,
+      "IMAGE"
+    ],
+    [
+      215,
+      108,
+      0,
+      112,
+      0,
+      "JSON"
+    ],
+    [
+      217,
+      37,
+      0,
+      8,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      218,
+      37,
+      0,
+      45,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      219,
+      37,
+      0,
+      60,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      220,
+      37,
+      0,
+      65,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      224,
+      85,
+      0,
+      119,
+      3,
+      "IMAGE"
+    ],
+    [
+      225,
+      83,
+      0,
+      119,
+      2,
+      "IMAGE"
+    ],
+    [
+      226,
+      80,
+      0,
+      119,
+      1,
+      "IMAGE"
+    ],
+    [
+      227,
+      78,
+      0,
+      119,
+      0,
+      "IMAGE"
+    ],
+    [
+      228,
+      119,
+      0,
+      120,
+      0,
+      "IMAGE"
+    ],
+    [
+      229,
+      134,
+      0,
+      133,
+      0,
+      "IMAGE"
+    ],
+    [
+      230,
+      137,
+      0,
+      133,
+      1,
+      "STRING"
+    ],
+    [
+      231,
+      135,
+      0,
+      134,
+      0,
+      "STRING"
+    ],
+    [
+      232,
+      136,
+      0,
+      137,
+      0,
+      "STRING"
+    ],
+    [
+      235,
+      134,
+      0,
+      141,
+      0,
+      "IMAGE"
+    ],
+    [
+      236,
+      141,
+      0,
+      137,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "8、第一轮",
+      "bounding": [
+        1609,
+        17,
+        736,
+        972
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "6、训练设置",
+      "bounding": [
+        653,
+        13,
+        934,
+        976
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "9、第二轮",
+      "bounding": [
+        2360,
+        19,
+        748,
+        969
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "10、第三轮",
+      "bounding": [
+        3120,
+        20,
+        755,
+        972
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "11、第四轮",
+      "bounding": [
+        3890,
+        21,
+        731,
+        970
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "5、上传训练集",
+      "bounding": [
+        21,
+        10,
+        616,
+        575
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "12、输出",
+      "bounding": [
+        4634,
+        23,
+        1182,
+        966
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "7、训练参数",
+      "bounding": [
+        18,
+        589,
+        619,
+        387
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "1、上传素材集",
+      "bounding": [
+        -2,
+        -1023,
+        404,
+        502
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "2、ollama反推",
+      "bounding": [
+        423,
+        -1028,
+        335,
+        505
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "3、触发词注入",
+      "bounding": [
+        768,
+        -1026,
+        389,
+        502
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "4、输出",
+      "bounding": [
+        1170,
+        -1024,
+        419,
+        501
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.683013455365071,
+      "offset": [
+        1165.2898224548076,
+        1196.6882341212242
+      ]
+    }
+  },
+  "version": 0.4
+}
